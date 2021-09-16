@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.border, .border-end {
+  border-color: black !important;
+}
+
+i {
+  background-color: black;
+  color: grey;
+}
+
+ul {
+  padding-left: 0 !important;
+}
