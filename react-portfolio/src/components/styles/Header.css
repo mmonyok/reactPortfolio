@@ -8,7 +8,7 @@
 
 .bannerImage {
   max-width: 100% !important;
-  height: 275px !important;
+  max-height: 275px !important;
 }
 
 #subtitle {
