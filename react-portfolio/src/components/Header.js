@@ -4,14 +4,13 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
+import banner from '../assets/images/banner.png';
+import './styles/Header.css';
 
 function Header() {
   const [currentPage, setCurrentPage] = useState('About');
 
   const renderPage = () => {
-    if (currentPage === 'About') {
-      return <About />;
-    }
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
     }
@@ -30,7 +29,9 @@ function Header() {
     <div>
       <header>
         <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
-
+        <div id="banner">
+          <img src={banner} className="bannerImage img-fluid w-100 h-100" alt="Gradient of darker grey to lighter" />
+        </div>
         {renderPage()}
       </header>
     </div>
