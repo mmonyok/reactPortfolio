@@ -1,0 +1,11 @@
+#messageInput {
+  height: 6em;
+}
+
+.form-label {
+  color: black;
+}
+
+.errorMsg {
+  color: red !important;
+}
