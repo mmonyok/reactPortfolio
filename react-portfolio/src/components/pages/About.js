@@ -1,6 +1,6 @@
 import React from 'react';
 import melody from '../../assets/images/melody.jpg';
-import '../styles/About.css';
+import '../../assets/styles/About.css';
 
 export default function About() {
   return (
@@ -19,10 +19,10 @@ export default function About() {
             <hr />
             She has 9+ years of experience in customer service, as well as 6 years of working in vendor management. Melody is an asset to any team due to her strong organizational skills, attention to detail, and work ethic. Her completion of the bootcamp is a testament to her ability to learn quickly.
             <hr />
-            An ideal workplace for Melody is one that has a dedicated development team that takes new developers and mentors them and fosters further education for advancement of coding proficiency.
+            An ideal workplace for Melody is one that has a dedicated development team that takes new developers and mentors them, fostering further education for advancement of coding proficiency.
           </p>
         </div>
       </div>
     </section>
   );
-}
+};

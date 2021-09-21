@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../styles/Contact.css";
+import "../../assets/styles/Contact.css";
 import { validateEmail } from '../../utils/helpers';
 
 export default function Contact() {
@@ -139,4 +139,4 @@ export default function Contact() {
       </form>
     </div>
   );
-}
+};

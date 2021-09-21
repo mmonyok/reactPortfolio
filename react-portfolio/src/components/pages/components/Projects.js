@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Projects.css';
+import '../../../assets/styles/Projects.css';
 
 export default function Projects({ projects }) {
   return (
@@ -19,4 +19,4 @@ export default function Projects({ projects }) {
       </div>
     </section>
   )
-}
+};

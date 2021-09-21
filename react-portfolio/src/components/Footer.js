@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Footer.css';
+import '../assets/styles/Footer.css';
 
 function Footer() {
   return (
@@ -26,6 +26,6 @@ function Footer() {
       <h6 className="fw-bold">2021 Monyok Web Development</h6>
     </footer>
   )
-}
+};
 
 export default Footer;

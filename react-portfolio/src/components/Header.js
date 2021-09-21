@@ -5,7 +5,7 @@ import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import banner from '../assets/images/banner.png';
-import './styles/Header.css';
+import '../assets/styles/Header.css';
 
 function Header() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -36,6 +36,6 @@ function Header() {
       </header>
     </div>
   );
-}
+};
 
 export default Header;
