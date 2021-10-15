@@ -1,0 +1,21 @@
+{
+  "name": "reactPortfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd react-portfolio && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmonyok/reactPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmonyok/reactPortfolio/issues"
+  },
+  "homepage": "https://github.com/mmonyok/reactPortfolio#readme"
+}

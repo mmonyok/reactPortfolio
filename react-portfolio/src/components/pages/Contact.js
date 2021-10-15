@@ -83,8 +83,8 @@ export default function Contact() {
 
   return (
     <div className="my-2">
-      <h1 className="ms-4 mb-4">Contact Melody</h1>
-      <form className="form ms-5 w-25 border border-dark rounded-3 p-3">
+      <h1 className="ms-4 mb-4 font-heavy">Contact Melody</h1>
+      <form className="form ms-5 w-25 border border-dark rounded-3 p-3 font">
         <input className="form-control"
           id="nameInput"
           value={name}

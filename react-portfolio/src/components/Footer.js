@@ -3,7 +3,7 @@ import '../assets/styles/Footer.css';
 
 function Footer() {
   return (
-    <footer className="text-center container-fluid border p-2">
+    <footer className="footer text-center container-fluid border p-2 font">
       <div>
         <ul className="d-inline-flex flex-row align-items-center mt-2">
           <li className="border rounded-3 pe-2 me-3 fw-bold">

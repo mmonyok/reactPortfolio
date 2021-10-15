@@ -6,6 +6,7 @@ import Fitness from '../../assets/images/fitnessTracker.jpg';
 import Tech from '../../assets/images/techBlog.jpg';
 import Weather from '../../assets/images/weatherDashboard.jpg';
 import Projects from './components/Projects';
+import '../../assets/styles/Portfolio.css';
 
 const projects = [
   {
@@ -49,7 +50,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <div>
-      <h1 className="ms-4 mt-2">Portfolio Page</h1>
+      <h1 className="ms-4 mt-2 font-heavy">Portfolio Page</h1>
       <Projects projects={projects} />
     </div>
   );

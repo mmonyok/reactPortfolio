@@ -9,3 +9,13 @@
 .errorMsg {
   color: red !important;
 }
+
+.font {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 500;
+}

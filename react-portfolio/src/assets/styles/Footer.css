@@ -2,10 +2,10 @@ li {
   list-style: none;
 }
 
-a {
+/* a {
   text-decoration: none !important;
-  color: black !important;
-}
+  color: green !important;
+} */
 
 .border, .border-end {
   border-color: black !important;
@@ -18,4 +18,14 @@ i {
 
 ul {
   padding-left: 0 !important;
+}
+
+.font {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 500;
 }
