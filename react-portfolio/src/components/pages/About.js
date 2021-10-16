@@ -5,9 +5,9 @@ import '../../assets/styles/About.css';
 export default function About() {
   return (
     <section className="my-2">
-      <h1 className="ms-4 mb-4 font-heavy">About Melody</h1>
-      <div className="d-flex">
-        <div className="ms-5 my-auto">
+      <h1 className="ms-4 font-heavy">About Melody</h1>
+      <div className="d-flex mt-5 w-75 mx-auto">
+        <div className="m-auto">
           <img src={melody} className="img-fluid melodyImg m-auto" alt="Melody" />
         </div>
         <div className="text-center w-50 m-auto font">

@@ -1,6 +1,9 @@
 .melodyImg {
   max-width: 300px !important;
-  border: 5px solid black;
+  margin: 50px 0 0 0 !important;
+  border: 5px solid hsl(0, 0%, 0%);
+  border-radius: 25px;
+  box-shadow: 5px 5px 7px black;;
 }
 
 .font {
