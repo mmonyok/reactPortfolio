@@ -26,15 +26,13 @@ function Header() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
-      <header>
-        <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
-        <div id="banner">
-          <img src={banner} className="img-fluid w-100 h-100 bannerImage" alt="Gradient of darker grey to lighter" />
-        </div>
-        {renderPage()}
-      </header>
-    </div>
+    <header className="contentContainer">
+      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+      <div id="banner">
+        <img src={banner} className="img-fluid w-100 h-100 bannerImage" alt="Gradient of darker grey to lighter" />
+      </div>
+      {renderPage()}
+    </header>
   );
 };
 

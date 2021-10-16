@@ -1,31 +1,39 @@
-li {
+footer {
+  background-color: #FAFAFA;
+}
+
+footer li {
   list-style: none;
 }
 
-/* a {
-  text-decoration: none !important;
-  color: green !important;
-} */
-
-.border, .border-end {
-  border-color: black !important;
-}
-
-i {
+footer i {
   background-color: black;
   color: grey;
 }
 
-ul {
+footer ul {
   padding-left: 0 !important;
 }
 
 .font {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
 }
 
 .font-heavy {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 500;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  color: grey;
+}
+
+.linkShadow {
+  box-shadow: 1px 4px 10px grey;
 }
