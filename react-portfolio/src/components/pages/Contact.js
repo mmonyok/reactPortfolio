@@ -12,6 +12,8 @@ export default function Contact() {
   const [messageError, setMessageError] = useState('');
   const [submitError, setSubmitError] = useState('');
 
+  const [status, setStatus] = useState("Submit");
+
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -29,9 +31,6 @@ export default function Contact() {
 
   // Checks if the name field has been filled.
   function checkName(e) {
-    // const { target } = e;
-    // const inputType = target.name;
-    // const inputValue = target.value;
     if (e.target.value === '') {
       setNameError("*Name is required.");
     } else {
@@ -58,7 +57,7 @@ export default function Contact() {
     }
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     // Prevent default behavior of form submits.
     e.preventDefault();
 
@@ -71,6 +70,37 @@ export default function Contact() {
       setSubmitError("Email format incorrect.")
       return;
     }
+    setStatus("Sending...");
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+      })
+    };
+
+    const response = await fetch("http://localhost:3000/contact", requestOptions);
+    const data = await response.json();
+
+    /* let details = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    let response = await fetch("http://localhost:3000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(details)
+    }); */
+
+    setStatus("Submit");
+    // const result = await response.json();
+    alert(data.status);
 
     setName('');
     setEmail('');

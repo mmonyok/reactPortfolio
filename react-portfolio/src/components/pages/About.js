@@ -13,16 +13,22 @@ export default function About() {
         <div className="text-center w-50 m-auto font">
           <p>
             As a full-stack web developer, she enjoys working in both front and back end coding projects but is especially passionate about JavaScript coding, as well as MySQL or Mongo Database structures. She thrives on researching and writing particularly tricky pieces of code.
-            <hr />
+          </p>
+          <hr />
+          <p>
             She graduated October, 2nd 2021 from a high-intensity 6 month bootcamp hosted by the University of MN with a Full-Stack Web Development certification. Within this program she learned HTML5, CSS3, JavaScript, jQuery, Bootstrap, Express.js, React.js, MERN Stack,
             Node.js, Database Theory, MongoDB, MySQL, Command Line, Web Apps, Git, and more.
-            <hr />
+          </p>
+          <hr />
+          <p>
             She has 9+ years of experience in customer service, as well as 6 years of working in vendor management. Melody is an asset to any team due to her strong organizational skills, attention to detail, and work ethic. Her completion of the bootcamp is a testament to her ability to learn quickly.
-            <hr />
+          </p>
+          <hr />
+          <p>
             An ideal workplace for Melody is one that has a dedicated development team that takes new developers and mentors them, fostering further education for advancement of coding proficiency.
           </p>
         </div>
       </div>
-    </section>
+    </section >
   );
 };

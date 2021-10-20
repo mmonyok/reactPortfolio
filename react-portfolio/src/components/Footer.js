@@ -29,10 +29,10 @@ function Footer() {
     <footer className="footer text-center container-fluid border p-2 font-heavy mt-5">
       <div>
         <ul className="d-inline-flex flex-row align-items-center mt-2">
-          {links.map((link) => (
-            <li className="border rounded-3 pe-2 mx-2 linkShadow">
-              <a className="my-auto" href={link.website} target="_blank" rel="noreferrer">
-                <i className={`h-100 p-2 rounded-start fab ${link.icon} fa-2x`}></i> {link.name}</a></li>
+          {links.map((link, i, b, l) => (
+            <li key={i} className="border rounded-3 pe-2 mx-2 linkShadow">
+              <a key={b} className="my-auto" href={link.website} target="_blank" rel="noreferrer">
+                <i key={l} className={`h-100 p-2 rounded-start fab ${link.icon} fa-2x`}></i> {link.name}</a></li>
           ))}
         </ul>
       </div>
