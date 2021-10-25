@@ -19,7 +19,8 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("http://localhost:3000/contact", (req, res) => {
+router.post("/contact", (req, res) => {
+  console.log("helloooooooooooooo");
   console.log(req.headers);
   const name = req.body.name;
   const email = req.body.email;

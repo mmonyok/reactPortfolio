@@ -61,54 +61,63 @@ export default function Contact() {
     // Prevent default behavior of form submits.
     e.preventDefault();
 
-    // Error messages for if any fields are left empty or email is entered wrong.
-    if (!name || !email || !message) {
-      setSubmitError("*All fields must be filled.")
-      return;
-    }
-    if (!validateEmail(email)) {
-      setSubmitError("Email format incorrect.")
-      return;
-    }
-    setStatus("Sending...");
+    try {
+      // Error messages for if any fields are left empty or email is entered wrong.
+      if (!name || !email || !message) {
+        setSubmitError("*All fields must be filled.")
+        return;
+      }
+      if (!validateEmail(email)) {
+        setSubmitError("Email format incorrect.")
+        return;
+      }
+      setStatus("Sending...");
 
-    const requestOptions = {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
+      /* const requestOptions = {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+          "Clear-Site-Data": "*"
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message
+        })
+      };
+
+      const response = await fetch("http://localhost:3000/contact", requestOptions);
+      const result = await response.json(); */
+
+      let details = {
         name: name,
         email: email,
-        message: message
-      })
-    };
+        message: message,
+      };
+      let response = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Clear-Site-Data": "*"
+        },
+        body: JSON.stringify(details)
+      });
 
-    const response = await fetch("http://localhost:3000/contact", requestOptions);
-    const data = await response.json();
+      setStatus("Submit");
+      console.log(response.headers);
+      const result = await response.json();
+      alert(result.status);
 
-    /* let details = {
-      name: name,
-      email: email,
-      message: message,
-    };
-    let response = await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(details)
-    }); */
-
-    setStatus("Submit");
-    // const result = await response.json();
-    alert(data.status);
-
-    setName('');
-    setEmail('');
-    setMessage('');
-    setNameError('');
-    setEmailError('');
-    setMessageError('');
-    setSubmitError('');
+      setName('');
+      setEmail('');
+      setMessage('');
+      setNameError('');
+      setEmailError('');
+      setMessageError('');
+      setSubmitError('');
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
