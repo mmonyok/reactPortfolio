@@ -73,39 +73,22 @@ export default function Contact() {
       }
       setStatus("Sending...");
 
-      /* const requestOptions = {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-          "Clear-Site-Data": "*"
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message
-        })
-      };
-
-      const response = await fetch("http://localhost:3000/contact", requestOptions);
-      const result = await response.json(); */
-
       let details = {
         name: name,
         email: email,
         message: message,
       };
-      let response = await fetch("http://localhost:3000/contact", {
+      console.log(details);
+      const response = await fetch("http://localhost:3001/send", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Clear-Site-Data": "*"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(details)
       });
 
-      setStatus("Submit");
-      console.log(response.headers);
       const result = await response.json();
+      setStatus("Email Sent.");
       alert(result.status);
 
       setName('');
