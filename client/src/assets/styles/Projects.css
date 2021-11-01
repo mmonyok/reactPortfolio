@@ -26,3 +26,12 @@ img[class*="projectImg"]:hover {
   font-family: 'Inconsolata', monospace;
   font-weight: 500;
 }
+
+.portfolioCard a {
+  text-decoration: none;
+  color: black;
+}
+
+.portfolioCard a:hover {
+  color: grey;
+}
