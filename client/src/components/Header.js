@@ -3,14 +3,29 @@ import NavBar from './NavBar';
 import banner from '../assets/images/banner.png';
 import '../assets/styles/Header.css';
 
+const links = [
+  {
+    name: "About",
+    href: "/about"
+  },
+  {
+    name: "Portfolio",
+    href: "/portfolio"
+  },
+  {
+    name: "Contact",
+    href: "/contact"
+  },
+  {
+    name: "Resume",
+    href: "/resume"
+  }
+];
+
 function Header({ children }) {
-  const [currentPage, setCurrentPage] = useState('About');
-
-  const handlePageChange = (page) => setCurrentPage(page);
-
   return (
     <header className="contentContainer">
-      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+      <NavBar links={links}/>
       <div id="banner">
         <img src={banner} className="img-fluid w-100 h-100 bannerImage" alt="Gradient of darker grey to lighter" />
       </div>
