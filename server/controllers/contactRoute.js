@@ -12,7 +12,6 @@ const transporter = nodemailer.createTransport({
     clientId: process.env.OAUTH_CLIENTID,
     clientSecret: process.env.OAUTH_CLIENT_SECRET,
     refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-    setAccessType: "offline"
   },
 });
 
@@ -21,6 +20,21 @@ transporter.verify((err, success) => {
     ? console.log(err)
     : console.log(`=== Server is ready to take messages: ${success} ===`);
 });
+
+/* let mailOptions = {
+  from: "test@gmail.com",
+  to: process.env.EMAIL,
+  subject: `Portfolio message from Melody Tester!`,
+  text: "Hi, from your nodemailer API.",
+};
+
+transporter.sendMail(mailOptions, function (err, data) {
+  if (err) {
+    console.log("Error " + err);
+  } else {
+    console.log("Email sent successfully.");
+  }
+}); */
 
 router.post("/send", function (req, res) {
   let mailOptions = {
