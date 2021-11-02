@@ -79,9 +79,7 @@ export default function Contact() {
         message: message,
       };
 
-      let fetchLink = "http://localhost:3001/send" || "https://melodymonyok.herokuapp.com/send";
-
-      const response = await fetch(fetchLink, {
+      const response = await fetch("https://melodymonyok.herokuapp.com/contact/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
