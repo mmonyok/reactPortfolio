@@ -78,8 +78,10 @@ export default function Contact() {
         email: email,
         message: message,
       };
-      console.log(details);
-      const response = await fetch("http://localhost:3001/send", {
+
+      let fetchLink = "http://localhost:3001/send" || "https://melodymonyok.herokuapp.com/send";
+
+      const response = await fetch(fetchLink, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
