@@ -12,6 +12,7 @@ const transporter = nodemailer.createTransport({
     clientId: process.env.OAUTH_CLIENTID,
     clientSecret: process.env.OAUTH_CLIENT_SECRET,
     refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+    setAccessType: "offline"
   },
 });
 
@@ -34,6 +35,7 @@ router.post("/send", function (req, res) {
       res.json({
         status: "Failed to send email.",
       });
+      console.log(err);
     } else {
       console.log("Email sent successfully.");
       res.json({
