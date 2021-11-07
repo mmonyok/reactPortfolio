@@ -1,5 +1,5 @@
 footer {
-  background-color: #FAFAFA;
+  background-color: #E5E4E2;
 }
 
 footer li {
@@ -36,4 +36,52 @@ footer a:hover {
 
 .linkShadow {
   box-shadow: 1px 4px 10px grey;
+}
+
+#linkIcon {
+  height: 48px;
+  width: 48px;
+}
+
+@media only screen and (max-width: 633px) {
+  #linkIcon {
+    border-radius: 15% !important;
+    margin: 5px auto 0 auto !important;
+  }
+
+  #linkContainer {
+    padding: 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .linkText {
+    margin: 0px 5px 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .linkText {
+    display: none;
+  }
+
+  #linkContainer {
+    padding: 0px !important;
+    background-color: black;
+    border-radius: 30% !important;
+  }
+
+  .socialLink {
+    margin: 0;
+  }
+
+  #iconLinks li {
+    padding: 0px !important;
+  }
+
+  #linkIcon {
+    margin: 0px !important;
+    border-radius: 30% !important;
+  }
 }
