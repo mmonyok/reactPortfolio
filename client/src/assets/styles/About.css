@@ -1,4 +1,4 @@
-.melodyImg {
+#melodyImg {
   max-width: 300px !important;
   margin: 50px 0 0 0 !important;
   border: 5px solid hsl(0, 0%, 0%);
@@ -16,3 +16,35 @@
   font-weight: 500;
 }
 
+@media only screen and (max-width: 1000px) {
+  #melodyImg {
+    margin: 0 1em !important;
+  }
+
+  #aboutText {
+    margin: 0 1em !important;
+  }
+}
+
+/* iPhone X media Query */
+@media only screen and (max-width: 616px) {
+  #aboutText {
+    width: 75% !important;
+    margin-top: 2em !important;
+    margin: 2em auto !important;
+  }
+
+  #aboutTitle {
+    margin: 1em 0 !important;
+    text-align: center;
+  }
+
+  #bodySection {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}

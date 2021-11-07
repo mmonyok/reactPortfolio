@@ -5,12 +5,12 @@ import '../../assets/styles/About.css';
 export default function About() {
   return (
     <section className="my-2">
-      <h1 className="ms-4 font-heavy">About Melody</h1>
-      <div className="d-flex mt-5 w-75 mx-auto">
+      <h1 className="ms-4 font-heavy" id="aboutTitle">About Melody</h1>
+      <div className="d-flex mt-5 mx-auto" id="bodySection">
         <div className="m-auto">
-          <img src={melody} className="img-fluid melodyImg m-auto" alt="Melody" />
+          <img src={melody} className="img-fluid m-auto" id="melodyImg" alt="Melody" />
         </div>
-        <div className="text-center w-50 m-auto font">
+        <div className="text-center w-50 m-auto font" id="aboutText">
           <p>
             As a full-stack web developer, she enjoys working in both front and back end coding projects but is especially passionate about JavaScript coding, as well as MySQL or Mongo Database structures. She thrives on researching and writing particularly tricky pieces of code.
           </p>
