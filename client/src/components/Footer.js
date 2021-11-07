@@ -31,7 +31,7 @@ function Footer() {
       <div>
         <ul className="d-inline-flex flex-row align-items-center mt-2" id="iconLinks">
           {links.map((link, i, b, l, z) => (
-            <li key={i} className="border rounded-3 pe-2 mx-2 linkShadow linkContainer" id="linkContainer">
+            <li key={i} className="border rounded-3 pe-2 mx-2 linkShadow" id="linkContainer">
               <a key={b} className="socialLink" href={link.website} target="_blank" rel="noreferrer">
                 <i key={l} className={`me-2 h-100 p-2 rounded-start fab ${link.icon} fa-2x`} id="linkIcon"></i></a>
               <a key={z} className="my-auto linkText" href={link.website} target="_blank" rel="noreferrer">{link.name}</a>
