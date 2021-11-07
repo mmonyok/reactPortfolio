@@ -5,13 +5,14 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Portfolio from './components/pages/Portfolio';
 import Resume from './components/pages/Resume';
+import "./assets/styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 function App() {
   return (
     <Router>
-      <div>
+      <div id="app">
         <Header>
           <Switch>
             <Route exact path="/" component={About} />
