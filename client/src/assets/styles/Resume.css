@@ -1,9 +1,43 @@
 .font {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
 }
 
 .font-heavy {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 500;
+}
+
+#skillsTitle {
+  margin: 0px;
+}
+
+.resumeBtn {
+  box-shadow: 2px 2px 4px grey;
+}
+
+.skillsCard {
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 1px 4px 10px grey;
+  padding: 5px 5px 0px 5px;
+  margin: 25px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  #skillsDiv {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .skillsCard {
+    width: 75% !important;
+    margin: 25px 0px 0px 0px !important;
+  }
+
+  .resumeBtn {
+    margin-top: 25px;
+  }
 }
