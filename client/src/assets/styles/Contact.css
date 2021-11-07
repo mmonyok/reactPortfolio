@@ -16,6 +16,19 @@
 }
 
 .font-heavy {
-  font-family: 'Inconsolata', monospace;
-  font-weight: 500;
+  font-family: 'Inconsolata', monospace !important;
+  font-weight: 500 !important;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: black;
+}
+
+.contactLink:hover {
+  color: gray;
+}
+
+#email {
+  font-style: italic;
 }
