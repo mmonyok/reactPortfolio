@@ -10,6 +10,18 @@
   color: red !important;
 }
 
+.waitingStatus {
+  color: darkorange;
+}
+
+.sentStatus {
+  color: green;
+}
+
+.status {
+  font-weight: 500;
+}
+
 .font {
   font-family: 'Inconsolata', monospace;
   font-weight: 400;

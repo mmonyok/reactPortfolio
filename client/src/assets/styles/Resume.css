@@ -32,7 +32,7 @@
     width: 100% !important;
   }
 
-  .skillsCard {
+  div .skillsCard {
     width: 75% !important;
     margin: 25px 0px 0px 0px !important;
   }

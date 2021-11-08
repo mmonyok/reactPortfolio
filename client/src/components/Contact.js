@@ -12,6 +12,7 @@ export default function Contact(props) {
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
   const [submitError, setSubmitError] = useState('');
+  const [submitStatus, setSubmitStatus] = useState('');
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -70,6 +71,7 @@ export default function Contact(props) {
         setSubmitError("Email format incorrect.")
         return;
       }
+      setSubmitStatus("Sending Email...");
 
       let details = {
         name: name,
@@ -86,17 +88,29 @@ export default function Contact(props) {
       });
 
       const result = await response.json();
-      alert(result.status);
-
-      setName('');
-      setEmail('');
-      setMessage('');
-      setNameError('');
-      setEmailError('');
-      setMessageError('');
-      setSubmitError('');
-
-      props.onHide()
+      setSubmitStatus(result.status);
+      // This timer delays the closing of the modal, so the user can see that their email was sent successfully.
+      function timeFunction() {
+        setTimeout(function () {
+          setName('');
+          setEmail('');
+          setMessage('');
+          setNameError('');
+          setEmailError('');
+          setMessageError('');
+          setSubmitError('');
+          setSubmitStatus('');
+          props.onHide()
+        }, 1000);
+      }
+      // We only call the timer function if the email was sent successfully, so that the user sees the message there was an error, and the modal isn't closed on them.
+      if (result.status === "Email sent successfully.") {
+        timeFunction()
+        return;
+      } else {
+        setSubmitStatus('');
+        setSubmitError(result.status);
+      };
     } catch (err) {
       console.error(err);
     }
@@ -180,25 +194,13 @@ export default function Contact(props) {
               <p className="ms-3 mt-2 mb-0 errorMsg">{submitError}</p>
             </div>
           )}
+          {submitStatus && (
+            <div>
+              <p className={`ms-3 mt-2 mb-0 ${submitStatus === "Sending Email..." ? "waitingStatus" : "sentStatus"} status`}>{submitStatus}</p>
+            </div>
+          )}
         </form>
       </Modal.Body>
     </Modal>
   );
 };
-
-// export default function Contact() {
-//   const [modalShow, setModalShow] = useState(false);
-//   return (
-//     <div className="my-2">
-//       <h1 className="ms-4 mb-4 font-heavy">Contact Page</h1>
-//       <Button variant="primary" onClick={() => setModalShow(true)}>
-//         Contact Melody!
-//       </Button>
-
-//       <Contact
-//         show={modalShow}
-//         onHide={() => setModalShow(false)}
-//       />
-//     </div>
-//   )
-// }
