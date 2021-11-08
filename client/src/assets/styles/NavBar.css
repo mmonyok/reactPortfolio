@@ -16,6 +16,14 @@ nav {
   color: gray;
 }
 
+#contactModal {
+  color: rgba(0,0,0,.55);
+}
+
+#contactModal:hover {
+  color: rgba(0,0,0,.70);
+}
+
 @media only screen and (max-width: 991px) {
   .navItems {
     margin-left: 2em;

@@ -6,19 +6,20 @@ import '../assets/styles/Header.css';
 const links = [
   {
     name: "About",
-    href: "/about"
+    href: "/about",
   },
   {
     name: "Portfolio",
-    href: "/portfolio"
+    href: "/portfolio",
   },
-  {
-    name: "Contact",
-    href: "/contact"
-  },
+  // {
+  //   name: "Contact",
+  //   href: "",
+  //   modal: "true"
+  // },
   {
     name: "Resume",
-    href: "/resume"
+    href: "/resume",
   }
 ];
 
