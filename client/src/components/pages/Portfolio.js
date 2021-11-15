@@ -50,7 +50,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <div>
-      <h1 className="ms-4 mt-2 font-heavy">Portfolio Page</h1>
+      <h1 className="ms-4 mt-2 font-heavy">My Projects</h1>
       <Projects projects={projects} />
     </div>
   );

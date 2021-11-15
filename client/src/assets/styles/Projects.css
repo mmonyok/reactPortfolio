@@ -13,8 +13,8 @@ img[class*="projectImg"] {
 }
 
 img[class*="projectImg"]:hover {
-  filter: grayscale(75%);
-  -webkit-filter: grayscale(75%);
+  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
 }
 
 .font {
@@ -34,4 +34,10 @@ img[class*="projectImg"]:hover {
 
 .portfolioCard a:hover {
   color: grey;
+}
+
+@media only screen and (max-width: 1000px) {
+  #projectCards {
+    width: 100% !important;
+  }
 }

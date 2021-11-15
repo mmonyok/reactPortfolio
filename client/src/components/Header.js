@@ -9,14 +9,9 @@ const links = [
     href: "/about",
   },
   {
-    name: "Portfolio",
+    name: "Projects",
     href: "/portfolio",
   },
-  // {
-  //   name: "Contact",
-  //   href: "",
-  //   modal: "true"
-  // },
   {
     name: "Resume",
     href: "/resume",
