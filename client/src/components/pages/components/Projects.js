@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../../assets/styles/Projects.css';
-// Use to make carousel: https://dzone.com/articles/how-to-build-responsive-react-carousel
+import { Button } from "react-bootstrap";
+// Possibly add later: Use to make carousel: https://dzone.com/articles/how-to-build-responsive-react-carousel
 
 export default function Projects({ projects }) {
   return (
@@ -14,6 +15,7 @@ export default function Projects({ projects }) {
               <h4 className="mt-1">{project.name}</h4>
             </a>
             <a href={project.github} target="_blank" rel="noreferrer" className="fst-italic"><i className="fas fa-code-branch fa-lg"></i> GitHub Repository</a>
+            <Button>View Summary</Button>
           </div>
           </div>
         ))}

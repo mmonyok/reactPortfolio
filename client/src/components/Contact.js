@@ -137,7 +137,7 @@ export default function Contact(props) {
         </h4>
         <h4 className="font text-center">
           <i className="fas fa-mobile-alt me-2"></i>
-          <a href="tel:6127921528" className="contactLink">
+          <a href="tel:6124921528" className="contactLink">
             612-792-1528
           </a>
         </h4>
