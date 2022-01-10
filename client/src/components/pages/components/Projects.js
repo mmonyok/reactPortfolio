@@ -10,13 +10,12 @@ export default function Projects({ projects }) {
         {projects.map((project, a) => (
           <div key={a} className="portfolioCard col w-50 my-3" id="projectCards">
             <div className="m-auto text-center col p-0 font">
-            <a href={project.application} target="_blank" rel="noreferrer">
-              <img src={project.image} className=".img-fluid border border-dark border-5 rounded-3 h-75 w-75 projectImg" alt="Project Screenshot" />
-              <h4 className="mt-1">{project.name}</h4>
-            </a>
-            <a href={project.github} target="_blank" rel="noreferrer" className="fst-italic"><i className="fas fa-code-branch fa-lg"></i> GitHub Repository</a>
-            <Button>View Summary</Button>
-          </div>
+              <a href={project.application} target="_blank" rel="noreferrer">
+                <img src={project.image} className=".img-fluid border border-dark border-5 rounded-3 h-75 w-75 projectImg" alt="Project Screenshot" />
+                <h4 className="mt-1">{project.name}</h4>
+              </a>
+              <a href={project.github} target="_blank" rel="noreferrer" className="fst-italic"><i className="fas fa-code-branch fa-lg"></i> GitHub Repository</a>
+            </div>
           </div>
         ))}
       </div>
