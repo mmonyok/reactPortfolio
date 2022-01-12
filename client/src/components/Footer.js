@@ -11,7 +11,7 @@ const links = [
     name: 'LinkedIn',
     icon: 'fa-linkedin',
     website: 'https://www.linkedin.com/in/melodymonyok/'
-  },
+  }/* ,
   {
     name: 'Stackoverflow',
     icon: 'fa-stack-overflow',
@@ -21,7 +21,7 @@ const links = [
     name: 'AngelList',
     icon: 'fa-angellist',
     website: 'https://angel.co/u/melody-monyok'
-  }
+  } */
 ];
 
 function Footer() {
